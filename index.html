@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .container {
+        margin-top: -30px;
+      }
+      span{
+        text-transform: uppercase;
+      }
+      .hero{
+        align-items: center;
+        border: 2px solid blanchedalmond;
+        padding-bottom: 20px;
+        background-color: aqua;
+      }
+      .zero{
+        text-align: center;
+      }
+      .card{
+        display: flex;
+
+      }
+      .card-item {
+        width: 30%;
+      }
+      .four{
+        border: 2px solid black;
+        width: 140px;
+        margin: 0 45%;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        margin-top: 5px; 
+      }
+      .para{
+        margin-left: 110px;
+        width: 200px;
+        /* margin-left: 50%; */
+        position: static;
+      }
+      img{
+        width: 200px;
+      }
+      .footer{
+        background-color: aquamarine;
+      }
+      .max{
+        font-weight: 600;
+        color: black;
+        font-size: larger;
+      }
+      .mini{
+        font-weight: 400;
+        color: black;
+        font-size: large;
+      }
+      .last{
+        font-weight: 700;
+        color: black;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a
+              role="button"
+              class="navbar-burger"
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-item"> <strong>MyApp</strong> </a>
+
+              <a class="navbar-item"> Home </a>
+                <a class="navbar-item"> About </a>
+                <a class="navbar-item"> Download The App </a>
+              </div>
+            </div>
+
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="form">
+                 <input type="email" placeholder="Email">
+                 <input type="password" placeholder="Password">
+                 <input type="submit" value="Login">
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <br>
+      <div class="hero">
+        <h1 class="max">My Awesome App!</h1>
+        <h2>This is why <span>you</span> should download the fantastic app!</h2>
+        <hr>
+        <h2>Want to know more?Join our mailing list!</h2>
+        <br>
+          <div class="field has-addons">
+            <p class="control">
+              <input class="input" type="text" placeholder="Your email">
+            </p>
+            <p class="control">
+              <a class="button is-static">
+                @
+              </a>
+              <a class="button is-primary">
+                Sign Up
+              </a>
+            </p>
+          </div>
+      </div> 
+      <br>
+      <div class="zero">
+        <h1 class="mini">Why This App Is Awesome</h1>
+        <h2>Summary, once again, of your app's awesomeness</h2>
+        <br>
+        <div class="card">
+          <div class="card-item">
+            <img src="image/garage.jpg" alt="garage">
+            <h3>Restaurant</h3>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vero repellendus iusto at 
+              soluta quisquam sapiente rerum minus autem impedit.</p>
+          </div>
+          <div class="card-item">
+            <img src="image/delivery.jpg" alt="bike for delivery">
+            <h3>Delivery</h3>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam vero fugiat 
+              porro maxime, ullam eaque exercitationem? Eligendi ea error nisi?</p>
+          </div>
+          <div class="card-item">
+            <img src="image/food.jpg" alt="">
+            <h3>Delicious</h3>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, fugit?
+               Possimus sunt illum odit vero totam architecto, vitae eveniet voluptates!</p>
+          </div>  
+        </div> 
+        <footer class="footer">
+          <div class="one">
+            <h1 class="last">Download the app!</h1>
+            <h2>Really, why should I download this app?</h2>
+
+            <h2 class="four"><i class="fa-solid fa-mobile"></i>Available on the <br>App store</h2>
+          </div>
+          
+            
+          
+
+        </footer> 
+      </div>       
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+    </script>
+  </body>
+</html>
